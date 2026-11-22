@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#172d4c">
+  <meta name="robots" content="noindex, nofollow">
+  <title>여행 수첩</title>
+  <style>
+*{box-sizing:border-box}body{margin:0;background:#f6f7f9;color:#14223a;font:16px/1.55 "Inter","Apple SD Gothic Neo","Malgun Gothic",sans-serif}button,input,select{font:inherit}button,a{cursor:pointer}button{color:inherit;background:white;border:1px solid #d7dde4;border-radius:6px;padding:7px 12px}button:hover,a:hover{filter:brightness(.94)}aside{width:198px;position:fixed;inset:0 auto 0 0;background:#fff;border-right:1px solid #e0e3e8;padding:29px 16px;z-index:2}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800;letter-spacing:-1px}.brand i{background:#182e4e;color:white;padding:7px;border-radius:9px}.ico{width:20px;height:20px;vertical-align:middle}i{display:inline-flex;font-style:normal}nav{margin-top:48px;display:grid;gap:6px}nav button{display:flex;align-items:center;gap:13px;border:0;text-align:left;padding:13px 17px;font-weight:650}nav .on{background:#172d4c;color:white}.private{position:absolute;bottom:26px;color:#657080;display:flex;gap:10px;font-size:14px;align-items:center}main{margin-left:198px;padding:24px clamp(20px,3.2vw,55px) 60px;max-width:1750px}header,.sectionhead,.dialoghead,.balance,.row{display:flex;align-items:center;justify-content:space-between;gap:10px}header{font-size:14px;color:#637084;margin-bottom:20px}header b{margin:0 10px;color:#a1a9b5}.hero{position:relative;overflow:hidden;background:#172d4c;border-radius:13px;color:white;min-height:175px;display:flex;align-items:center;padding:24px 32px}.heroText{position:relative;z-index:1}.hero small{display:flex;align-items:center;gap:9px;letter-spacing:2px;font-size:13px}.flag{display:inline-block;background:radial-gradient(circle,#ce4f58 0 3px,#fff 3.5px);width:22px;height:15px;border-radius:2px}.hero h1{font-size:clamp(32px,3.4vw,52px);margin:4px 0;letter-spacing:-3px}.hero h1 span{font:22px Georgia,serif;letter-spacing:3px;color:#b6c7df;margin-left:15px}.hero p{margin:0;font-size:15px}.hero em{font-style:normal;border-left:1px solid #73849b;padding-left:12px;margin-left:9px}#sky{position:absolute;right:0;bottom:0;width:52%;height:100%;color:#b0c3d9}.sectionhead{margin:25px 0 14px}.sectionhead h2,h2,h3{margin:0;letter-spacing:-.7px}.sectionhead h2{font-size:24px}.muted,small{color:#627082;font-size:14px}.hero small{color:white}.days{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}.days button{text-align:left;padding:12px 16px;border-radius:9px}.days button.on{background:#1d3555;color:white;border-color:#1d3555}.days small{display:block;font:600 12px/1.6 monospace;letter-spacing:1px}.days .on small{color:#c5d2e2}.days strong{font-size:19px}.days span{font-size:14px;margin-left:7px}.layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(245px,1fr);gap:18px;align-items:start}.panel{background:white;border:1px solid #dfe4e9;border-radius:11px;padding:20px 22px;margin-bottom:16px}.panel h3{font-size:18px;display:flex;align-items:center;gap:9px}.panel .head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:15px;border-bottom:1px solid #e6e8ec}.dayno{font:600 13px monospace;color:#6d7989;letter-spacing:1px}.event{display:grid;grid-template-columns:56px 33px 1fr auto;gap:9px;position:relative;align-items:center;min-height:71px}.event:not(:last-child):before{content:"";position:absolute;width:1px;background:#dce2e9;left:81px;top:50%;height:100%}.time{font:600 15px monospace}.bubble{width:33px;height:33px;background:#f0f3f7;border:1px solid #e1e6ed;border-radius:50%;align-items:center;justify-content:center;z-index:1}.bubble .ico{width:17px}.event strong,.event small{display:block}.event small{font-size:13px}.edit{border:0;background:transparent;color:#647385;padding:7px}.edit .ico{width:16px}.money{font-size:32px;letter-spacing:-1px;font-weight:750;margin:14px 0 4px}.bar{height:6px;background:#e7ecf2;border-radius:4px;margin:11px 0 14px;overflow:hidden}.bar b{display:block;height:100%;background:#334f73}.row{font-size:14px;margin:8px 0}.full{width:100%;margin-top:12px}.routeItem{display:flex;gap:11px;align-items:center;font-size:15px;padding:7px 0}.routeItem b{font:600 13px monospace;color:#687a8e}.primary{background:#1b3352;color:white;border-color:#1b3352}.panel a{display:inline-flex;align-items:center;gap:5px;color:#25446c;font-size:14px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.summary .panel{margin:0}.pair{padding:14px 0;border-bottom:1px solid #e6e8ec}.pair:last-child{border:0}.pair strong{display:block}.pair small{display:block}.actions{display:flex;gap:7px;align-items:center}.actions button{font-size:14px}dialog{border:0;border-radius:13px;width:min(440px,94vw);padding:23px;color:#16283f}dialog::backdrop{background:#11243b70}.dialoghead button{border:0;font-size:22px}label{display:block;margin-top:12px;font-size:14px}input,select{display:block;width:100%;padding:9px;border:1px solid #ccd4df;border-radius:6px;color:#14223a;background:white}#form>.primary{width:100%}#error{color:#973b40}.help{font-size:13px;color:#617086}.danger{color:#9c4444;margin-top:10px}
+@media(max-width:1050px){aside{width:150px}main{margin-left:150px;padding:20px}.panel{padding:16px}.layout{gap:12px;grid-template-columns:minmax(0,1.6fr) minmax(210px,1fr)}}@media(max-width:800px){aside{width:100%;height:auto;position:static;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}.brand{font-size:18px}.private{display:none}nav{display:flex;margin:0;gap:2px}nav button{padding:8px;gap:4px}main{margin:0;padding:16px}.hero{min-height:150px;padding:20px}.layout{grid-template-columns:1fr}.days{gap:5px}.days button{padding:8px}.days span{display:block;margin:0}.hero p{font-size:13px}#sky{width:44%;opacity:.72}.summary{gap:6px}.summary .panel{padding:9px}.summary .money{font-size:20px}.event{gap:6px}.event:not(:last-child):before{left:78px}.sectionhead h2{font-size:21px}}@media(max-width:440px){.heroText{background:linear-gradient(90deg,#172d4c 65%,transparent);padding-right:15px}.brand i{display:none}.panel{padding:14px}.days span{font-size:12px}}
+
+[hidden]{display:none!important}:focus-visible{outline:2px solid #5576a6;outline-offset:3px}
+.gate{min-height:100dvh;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at 75% 0%,#e4ecf5,transparent 60%),#f6f7f9}
+.gate-card{width:min(100%,390px);padding:32px;background:white;border:1px solid #dfe4e9;border-radius:14px;box-shadow:0 16px 66px #14284414}
+.gate-card h1{margin:14px 0 4px;letter-spacing:-1.5px}.gate-card p{margin:0 0 15px}.gate-card .error:not(:empty){margin:8px 0}
+.gate-icon{border-radius:10px;display:grid;place-items:center;width:47px;height:47px;background:#172d4c;color:#fff}
+.password-row{display:flex;gap:8px}.password-row button{flex:0 0 43px}.timezone{white-space:nowrap}#mobile-lock{display:none}
+.private{background:transparent;border:none;padding-left:7px}
+.event{grid-template-columns:56px 33px minmax(0,1fr) auto}.event strong{overflow-wrap:anywhere}.event.done strong{text-decoration:line-through;color:#647385}.event.done .bubble{background:#243c5e;color:white}
+.event .edit{padding:5px}.tag{display:inline-block;border:1px solid #d9e1e9;background:#f7f9fc;padding:0 6px;border-radius:4px;color:#465d7a;font-size:12px;white-space:nowrap;font-weight:600}.tag.confirmed{background:#e5ebf4;color:#1c385e;border-color:#d2dce9}
+.main-label{display:flex;align-items:center;flex-wrap:wrap;gap:6px}.subtext{margin:0 0 12px;color:#627082;font-size:14px}
+.compact{font-size:14px}.empty{padding:14px 0;color:#657080}.routeItem span{overflow-wrap:anywhere}.routeItem i{color:#627082;margin-right:2px}
+.route-place{border-bottom:1px solid #e6e8ed;padding:14px 0;display:flex;gap:12px;align-items:flex-start}.route-place:last-child{border:0}.route-place .bubble{flex-shrink:0}.route-links{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:7px}.route-place small{display:block}.route-place strong{overflow-wrap:anywhere}
+.expense-row{border-bottom:1px solid #e6e8ed;padding:12px 0;display:flex;justify-content:space-between;align-items:center;gap:8px}.expense-row:last-child{border:0}.expense-row small,.expense-row strong{display:block;overflow-wrap:anywhere}.expense-row .amount{white-space:nowrap}
+.money,.amount,.time{font-variant-numeric:tabular-nums}.budget-stats{margin-bottom:16px}.budget-stats .money{margin:5px 0 0}.allocation{display:grid;grid-template-columns:1fr auto;gap:8px}.allocation .bar{grid-column:1/-1;margin:0 0 9px}.over{color:#8a3540}.budget-filter{margin-bottom:13px;display:flex;align-items:center;justify-content:space-between;gap:10px}.budget-filter label{margin:0}.budget-filter select{width:auto}.sectionhead .actions{flex-wrap:wrap;justify-content:flex-end}.sectionhead .actions button{white-space:nowrap}
+footer{margin-top:6px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;color:#627082}footer button{font-size:13px;white-space:nowrap}
+.editor-actions{display:flex;gap:8px}.editor-actions .primary{flex:1}.danger{margin:0}.error{color:#973b40;font-size:14px;margin:8px 0}.form-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}dialog{max-height:92dvh}label span{display:block;margin-bottom:3px}input,select{min-width:0}
+@media(max-width:800px){
+  aside{position:sticky;top:0;border-bottom:1px solid #e0e3e8}
+  #mobile-lock{display:inline-flex;align-items:center;gap:5px;font-size:14px}
+  .timezone{display:none}
+}
+@media(max-width:440px){
+  .sectionhead{gap:6px}.sectionhead button{padding:7px 8px}
+  .event{grid-template-columns:45px 29px minmax(0,1fr) auto}.event:not(:last-child):before{left:65px}.bubble{width:29px;height:29px}
+  .event .actions{gap:0}.event .edit{padding:5px 3px}
+}
+
+/* Navy ticket-style cover and subtle waypoint marks. */
+:root {
+  --ink: #142844;
+  --secondary-ink: #4e6480;
+  --line: #dbe4ef;
+  --paper-blue: #f0f4f9;
+}
+body { background: #f5f7fa; }
+.hero {
+  background: radial-gradient(ellipse at 77% 14%, #314e72 0, #1d3658 44%, #132844 80%);
+  min-height: 195px;
+  border: 1px solid #1d3453;
+  box-shadow: 0 11px 22px #192d4716;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #b7c8e635;
+  border-radius: 9px;
+  pointer-events: none;
+}
+.heroText { padding: 8px 13px 12px 0; }
+.heroText small {
+  width: max-content;
+  border: 1px solid #a9bcda66;
+  padding: 4px 9px;
+  border-radius: 4px;
+}
+.hero-perforation {
+  position: absolute;
+  height: 1px;
+  bottom: 1px;
+  left: 0;
+  right: 15%;
+  border-bottom: 1px dashed #b7c8e666;
+}
+#sky { width: 58%; }
+.days button {
+  background: #fff;
+  box-shadow: 0 2px 4px #192d4708;
+}
+.days button.on {
+  background: linear-gradient(145deg,#1a2f4c,#2b466a);
+  box-shadow: inset 0 3px #8ea7ca,0 4px 10px #213b5b24;
+}
+.panel { box-shadow: 0 3px 12px #192d4708; }
+.event { padding: 7px 0; }
+.event .bubble { background: #eef3fa; border-color: #d7e2f0; }
+.event.done .bubble { background: #243c5e; }
+.gate-card {
+  border-top: 4px solid #2d4668;
+  outline: 1px dashed #d1dce9;
+  outline-offset: -10px;
+}
+.gate-icon { box-shadow: 0 0 0 4px #e9eff7; }
+.estimated-panel { border-top: 3px solid #466187; }
+.estimate-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 4px; padding: 2px 6px; border-radius: 4px;
+  color: var(--ink); background: var(--paper-blue); font-size: 13px;
+}
+.estimate-chip .ico { width: 14px; height: 14px; flex: 0 0 14px; }
+.fx-value { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px 6px; }
+.fx-value > span { white-space: nowrap; }
+.fx-won { font-size: .83em; font-weight: 550; color: var(--secondary-ink); }
+.money .fx-value, .expense-row .fx-value {
+  display: flex; flex-direction: column; gap: 0; align-items: flex-start;
+}
+.money .fx-won, .expense-row .fx-won { font-size: 13px; line-height: 1.4; letter-spacing: 0; }
+.expense-row .fx-value { align-items: flex-end; }
+.row > strong, .row > b { text-align: right; }
+.allocation > b { display: flex; align-items: flex-start; gap: 5px; }
+.allocation .fx-value { flex-direction: column; gap: 0; }
+.allocation-slash { color: #647a95; }
+.rate { color: var(--secondary-ink); font-size: 13px; }
+.rate b { color: var(--ink); margin-right: 5px; }
+.exchange-strip {
+  display: flex; align-items: center; gap: 7px;
+  color: #476489; padding: 7px 10px; margin: 0 0 12px;
+  width: fit-content; background: var(--paper-blue); border: 1px solid var(--line); border-radius: 6px;
+}
+.exchange-strip .ico { width: 17px; height: 17px; }
+.estimate-summary .row { margin: 7px 0 0; }
+.money-preview { background: var(--paper-blue); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-top: 14px; }
+.money-preview .row { margin: 4px 0; gap: 8px; }
+.money-preview .rate, .estimated-panel .rate { display: block; margin-top: 7px; }
+@media(max-width:800px) {
+  .hero { min-height: 166px; }
+  .money .fx-won { font-size: 12px; }
+}
+@media(max-width:440px) {
+  .heroText { background: linear-gradient(90deg,#172d4cf0 70%,transparent); }
+  #sky { width: 67%; right: -5%; opacity: .7; }
+  .budget-stats .money { font-size: clamp(14px,4.3vw,20px); }
+  .expense-row .fx-won { font-size: 12px; }
+}
+
+  </style>
+</head>
+<body>
+  <section id="gate" class="gate">
+    <div class="gate-card">
+      <div class="gate-icon" data-i="lock"></div>
+      <h1>여행 수첩</h1>
+      <p class="muted" id="gate-hint">이 화면이 그대로라면 파일을 다운로드하고 Chrome·Edge·Safari에서 직접 열어주세요.</p>
+      <form id="unlock" autocomplete="off">
+        <label for="password">접속 코드</label>
+        <div class="password-row">
+          <input id="password" type="password" required spellcheck="false" enterkeyhint="go" autocapitalize="none">
+          <button type="button" id="show-password" aria-label="접속 코드 표시" data-i="eye"></button>
+        </div>
+        <p id="gate-error" class="error" role="alert"></p>
+        <button type="submit" class="primary full" id="open-book" disabled>수첩 열기</button>
+      </form>
+    </div>
+  </section>
+  <div id="app" hidden>
+    <aside>
+      <div class="brand"><i data-i="book"></i> 여행 수첩</div>
+      <nav id="nav" aria-label="수첩 메뉴"></nav>
+      <button class="private" type="button" data-action="lock"><i data-i="lock"></i> 잠그기</button>
+    </aside>
+    <main>
+      <header>
+        <span>내 여행 <b>/</b> <span id="location-name"></span></span>
+        <button type="button" class="edit" data-action="lock" id="mobile-lock"><i data-i="lock"></i> 잠그기</button>
+        <span class="timezone">일본 표준시 · JST</span>
+      </header>
+      <section class="hero">
+        <div class="heroText">
+          <small><span class="flag"></span><span id="country-name"></span></small>
+          <h1 id="trip-heading"></h1>
+          <p id="trip-dates"></p>
+          <span class="hero-perforation" aria-hidden="true"></span>
+        </div>
+        <svg id="sky" viewBox="0 0 530 180" aria-hidden="true">
+          
+          <defs>
+            <pattern id="wave" width="36" height="18" patternUnits="userSpaceOnUse">
+              <path d="M0 18a18 18 0 0 1 36 0M4 18a14 14 0 0 1 28 0M8 18a10 10 0 0 1 20 0" fill="none" stroke="#aac0df" stroke-width=".65"/>
+            </pattern>
+          </defs>
+          <path d="M200 145H530V180H200Z" fill="url(#wave)" opacity=".28"/>
+          <circle cx="396" cy="65" r="48" fill="#c0d0e6" opacity=".12"/>
+          <circle cx="396" cy="65" r="56" fill="none" stroke="#b1c7e5" opacity=".28"/>
+          <path d="M276 72h55m-41-6h29m141 1h43m-33-6h42M346 128h28" fill="none" stroke="#a5bedc" opacity=".47"/>
+          <path d="m164 100 17-11 17 12-9-2-6 5-8-6-11 2Z" fill="#d9e5f5" opacity=".72"/>
+          <path d="M231 73h24m-12-12v24m-7-19 14 14m0-14-14 14" fill="none" stroke="#d6e3f3" opacity=".48"/>
+          <path d="M476 37h12m-6-6v12m-16 14h5m-2.5-2.5v5" fill="none" stroke="#e0ebf8" opacity=".6"/>
+          <path d="M7 168 77 134l30 6 74-51 35 22 58 47m-253 10h507" fill="none" stroke="currentColor" stroke-width="1" opacity=".42"/>
+          <path d="M290 168v-67h33v67m10 0v-42h31v42m92 0v-56h32v56m8 0v-84h29v84m-252 0v-37h-27v37" fill="none" stroke="currentColor" opacity=".42"/>
+          <path d="M377 168l22-55 13-78 12 78 22 55m-54-55h39m-35 12h32m-43 17h53m-26-107V14m-21 128 34-17m-1 17-26-17m-57 43 27-26m45 0 23 26" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M51 168v-26m46 26v-26m-56 0h67m-69-9q35 6 72 0m4-2q-3 10-29 9m-48-9q3 10 29 9m-14 11h44" fill="none" stroke="currentColor" stroke-width="2" opacity=".72"/>
+        </svg>
+      </section>
+      <div id="content"></div>
+      <footer><span id="status" role="status"></span><button class="edit" type="button" data-action="backup"><i data-i="download"></i> 잠금 백업</button></footer>
+    </main>
+  </div>
+  <dialog id="modal">
+    <form id="editor">
+      <div class="dialoghead"><h2 id="editor-title"></h2><button type="button" id="close" aria-label="닫기">×</button></div>
+      <div id="fields"></div>
+      <div id="money-preview" class="money-preview" aria-live="polite" hidden></div>
+      <p id="error" class="error" role="alert"></p>
+      <div class="editor-actions"><button type="button" class="danger" id="remove" hidden>삭제</button><button class="primary" id="save">저장</button></div>
+    </form>
+  </dialog>
+  <script type="application/json" id="trip-payload">{"salt": "SoovJDlFhU+IC+Gy5sv7Og==", "iv": "sb4fnSJBbrtXr/Y3", "ct": "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"}</script>
+  <script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const icons = {
+    book: '<path d="M5 3h14v18H5a2 2 0 0 1 0-4h14M7 3v14M10 7h6m-6 4h6"/>',
+    calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5h2m4 0h2"/>',
+    wallet: '<path d="M20 7V5H5a2 2 0 0 0 0 4h16v11H5a2 2 0 0 1-2-2V7"/><path d="M21 12h-5a2 2 0 0 0 0 4h5m-4-2h.01"/>',
+    route: '<circle cx="6" cy="17" r="3"/><circle cx="18" cy="7" r="3"/><path d="M9 17h8a3 3 0 0 0 0-6h-9a3 3 0 0 1 0-6h2"/>',
+    lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/>',
+    eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+    plane: '<path d="m22 2-7 20-4-9-9-4 20-7ZM11 13 22 2"/>',
+    train: '<rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 10h14M12 3v7m-4 8-3 4m11-4 3 4m-11-8h.01m8 0h.01"/>',
+    hotel: '<path d="M3 19v-9m18 9v-5a3 3 0 0 0-3-3h-8v5m-7 0h18"/><circle cx="7" cy="12" r="2"/>',
+    bag: '<path d="M5 8h14l2 13H3L5 8Zm4 2V6a3 3 0 0 1 6 0v4"/>',
+    food: '<path d="M4 3v6a3 3 0 1 0 6 0V3M7 3v18m12 0V3c-3 0-4 4-4 10h4"/>',
+    game: '<path d="M7 7h10c2 0 3 2 4 6 1 4-1 5-3 4l-3-2H9l-3 2c-2 1-4 0-3-4 1-4 2-6 4-6Zm1 3v4m-2-2h4m5-1h.01m3 2h.01"/>',
+    ticket: '<path d="M3 6h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4V6Zm12 0v2m0 3v2m0 3v2"/>',
+    pin: '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/>',
+    edit: '<path d="m15 5 4 4M4 20l5-1L21 7l-4-4L5 15l-1 5Z"/>',
+    check: '<path d="m5 12 4 4L19 6"/>',
+    plus: '<path d="M12 5v14M5 12h14"/>',
+    download: '<path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/>',
+  };
+  const icon = (name) => `<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name] || icons.pin}</svg>`;
+  document.querySelectorAll('[data-i]').forEach((el) => { el.innerHTML = icon(el.dataset.i); });
+  const escape = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+  function newId() {
+    return Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) =>
+      byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  const categories = ['교통', '식비', '쇼핑', '입장·게임', '숙박', '기타'];
+  const periods = [['새벽', '00:00–05:59', 0, 6], ['오전', '06:00–11:59', 6, 12], ['오후', '12:00–17:59', 12, 18], ['저녁', '18:00–23:59', 18, 24]];
+  const eventTypes = [['pin','방문'], ['plane','항공'], ['train','교통'], ['hotel','숙소'], ['bag','쇼핑'], ['food','식사'], ['game','게임'], ['ticket','입장']];
+  const sections = [['plan','calendar','계획'], ['budget','wallet','예산'], ['route','route','코스']];
+  const allowedStatuses = ['계획', '확정', '예상', '목표', '확인', '선택'];
+  const payload = JSON.parse($('trip-payload').textContent);
+  const cacheKey = 'travel-book:' + payload.salt + ':' + (payload.copy || 'original') + ':' + location.pathname;
+  const encoder = new TextEncoder();
+  const decoder = new TextDecoder();
+  const decode64 = (str) => Uint8Array.from(atob(str), (char) => char.charCodeAt(0));
+  const encode64 = (bytes) => btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join(''));
+  let key = null;
+  let state = null;
+  let page = 'plan';
+  let day = 0;
+  let filter = 'all';
+  let editor = null;
+  let diskSnapshot = null;
+  let saving = false;
+  let canStore = true;
+
+  async function getKey(password) {
+    const material = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey({
+      name: 'PBKDF2', salt: decode64(payload.salt), iterations: 600000, hash: 'SHA-256',
+    }, material, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+  }
+
+  async function decrypt(record, accessKey) {
+    const plaintext = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: decode64(record.iv) }, accessKey, decode64(record.ct));
+    const result = JSON.parse(decoder.decode(plaintext));
+    if (result.version !== 1 || result.days.length !== 4) throw new Error('Invalid data');
+    return result;
+  }
+
+  async function encrypt(data) {
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const cipher = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, encoder.encode(JSON.stringify(data)));
+    return { salt: payload.salt, iv: encode64(iv), ct: encode64(new Uint8Array(cipher)) };
+  }
+
+  const yenFmt = new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' });
+  const yen = (value) => yenFmt.format(value);
+  const wonPer100Yen = 830;
+  const wonFmt = new Intl.NumberFormat('ko-KR');
+  const won = (value) => {
+    const amount = Math.round(Math.abs(value) * wonPer100Yen / 100);
+    return (value < 0 ? '−' : '') + wonFmt.format(amount) + '원';
+  };
+  const money = (value) => `<span class="fx-value"><span>${yen(value)}</span><span class="fx-won">약 ${won(value)}</span></span>`;
+  const rate = () => `<span class="rate"><b>환산 기준</b> 100엔 = ${wonFmt.format(wonPer100Yen)}원</span>`;
+  const isoDate = (index) => {
+    const date = new Date(state.startDate + 'T00:00:00Z');
+    date.setUTCDate(date.getUTCDate() + index);
+    return date.toISOString().slice(0, 10);
+  };
+  const dayLabel = (index) => `${state.days[index][0]} (${state.days[index][1]})`;
+  const sum = (numbers) => numbers.reduce((total, value) => total + value, 0);
+  const totalSpend = () => sum(state.expenses.map((entry) => entry.amount));
+  const allocated = () => sum(Object.values(state.budget));
+  const planned = (items, skipId) => sum(items.filter((event) => event.id !== skipId).map((event) => event.estimate ?? 0));
+  const allEvents = () => state.days.flatMap((entry) => entry[3]);
+  const remaining = (amount) => state.total
+    ? `<span class="${amount > state.total ? 'over' : ''}">${money(state.total - amount)}</span>`
+    : '<span class="muted">미설정</span>';
+  const spend = (entries, category) => sum(entries.filter((entry) => !category || entry.category === category).map((entry) => entry.amount));
+  const events = () => [...state.days[day][3]].sort((a,b) => a.time.localeCompare(b.time));
+  function checkpoints() {
+    const stops = [];
+    for (const event of events()) {
+      if (event.place && event.place !== stops[stops.length - 1]?.place) stops.push(event);
+    }
+    return stops;
+  }
+  const button = (label, glyph, action, id = '', classes = '') => `<button type="button" class="${classes}" data-action="${action}" data-id="${id}">${glyph ? icon(glyph) : ''} ${label}</button>`;
+  const iconButton = (label, glyph, action, id) => `<button type="button" class="edit" data-action="${action}" data-id="${id}" aria-label="${label}" title="${label}">${icon(glyph)}</button>`;
+  const mapLink = (label, quote) => `<a href="${escape(quote)}" target="_blank" rel="noopener noreferrer">${icon('pin')} ${label}</a>`;
+  const mapURL = (target, previous) => {
+    const params = new URLSearchParams({ api: '1' });
+    if (!previous) {
+      params.set('query', target.place);
+      return 'https://www.google.com/maps/search/?' + params;
+    }
+    params.set('origin', previous.place);
+    params.set('destination', target.place);
+    params.set('travelmode', !target.mode || /도보|건물|같은/.test(target.mode) ? 'walking' : 'transit');
+    return 'https://www.google.com/maps/dir/?' + params;
+  };
+  const bar = (numerator, denominator) => {
+    const percent = denominator ? Math.min(100, 100 * numerator / denominator) : (numerator ? 100 : 0);
+    return `<div class="bar" role="progressbar" aria-label="예산 사용률" aria-valuenow="${Math.round(percent)}" aria-valuemin="0" aria-valuemax="100"><b style="width:${percent}%"></b></div>`;
+  };
+
+  function tabs() {
+    return `<div class="days" aria-label="여행 날짜">${state.days.map(([date, weekday, title], index) => `
+      <button type="button" class="${index === day ? 'on' : ''}" aria-pressed="${index === day}" data-action="day" data-id="${index}">
+        <small>${weekday}요일</small><strong>${date}</strong><span>${escape(title)}</span>
+      </button>`).join('')}</div>`;
+  }
+
+  function plan() {
+    const sorted = events();
+    const todaySpend = spend(state.expenses.filter((entry) => entry.date === isoDate(day)));
+    const stops = checkpoints();
+    const dayEstimate = planned(sorted);
+    const tripEstimate = planned(allEvents());
+    return `
+      <div class="sectionhead"><h2>여행 계획</h2>${button('일정 추가', 'plus', 'newEvent', '', 'compact primary')}</div>
+      ${tabs()}
+      <div class="layout">
+        <section class="panel">
+          <div class="head"><h3>${dayLabel(day)} · ${escape(state.days[day][2])}</h3><span class="muted">${sorted.filter((event) => event.done).length}/${sorted.length} 완료</span></div>
+          ${sorted.map((event) => `<div class="event ${event.done ? 'done' : ''}">
+            <span class="time">${escape(event.time)}</span><i class="bubble">${icon(event.done ? 'check' : event.type)}</i>
+            <div><div class="main-label"><strong>${escape(event.title)}</strong>${event.status !== '계획' ? `<span class="tag ${event.status === '확정' ? 'confirmed' : ''}">${escape(event.status)}</span>` : ''}</div><small>${escape(event.note)}</small>
+            ${event.estimate !== undefined && event.estimate !== null ? `<span class="estimate-chip">${icon('wallet')} 예상 ${money(event.estimate)}</span>` : ''}
+            </div>
+            <div class="actions">${iconButton('완료 상태 전환', 'check', 'toggleEvent', event.id)}${iconButton('일정 수정', 'edit', 'editEvent', event.id)}</div>
+          </div>`).join('') || '<p class="empty">일정을 추가해 주세요.</p>'}
+        </section>
+        <div>
+          <section class="panel estimated-panel">
+            <h3>${icon('calendar')} 일정 예상 비용</h3>
+            <div class="row"><span>선택한 날짜</span><strong>${money(dayEstimate)}</strong></div>
+            <div class="row"><span>여행 전체</span><strong>${money(tripEstimate)}</strong></div>
+            <div class="row"><span>예상 비용 반영 후</span><strong>${remaining(tripEstimate)}</strong></div>
+            ${rate()}
+          </section>
+          <section class="panel"><h3>${icon('wallet')} 선택한 날짜 지출</h3><div class="money">${money(todaySpend)}</div>
+            <div class="row"><span>여행 전체 지출</span><strong>${money(totalSpend())}</strong></div>
+            ${bar(totalSpend(), state.total)}<div class="row"><span>전체 예산</span><strong>${state.total ? money(state.total) : '미설정'}</strong></div>
+            ${button('지출 기록', 'plus', 'newExpense', '', 'full')}
+          </section>
+          <section class="panel"><h3>${icon('route')} 오늘 코스</h3>
+            ${stops.slice(0, 4).map((event) => `<div class="routeItem"><i>${icon(event.type)}</i><span>${escape(event.title)}</span></div>`).join('')}
+            ${button('전체 코스 보기', 'route', 'page', 'route', 'full')}
+          </section>
+        </div>
+      </div>`;
+  }
+
+  function budget() {
+    const overall = totalSpend();
+    const reserved = allocated();
+    const tripEstimate = planned(allEvents());
+    const entries = state.expenses
+      .filter((entry) => filter === 'all' || entry.date === isoDate(Number(filter)))
+      .sort((a,b) => (b.date + b.time).localeCompare(a.date + a.time));
+    return `
+      <div class="sectionhead"><h2>여행 예산</h2><div class="actions">
+        ${button('예산 배분', 'wallet', 'editBudget')}${button('지출 기록', 'plus', 'newExpense', '', 'primary')}
+      </div></div>
+      <div class="exchange-strip">${icon('wallet')} ${rate()}</div>
+      <div class="summary budget-stats">
+        <div class="panel"><span class="muted">전체 예산</span><div class="money">${state.total ? money(state.total) : '미설정'}</div></div>
+        <div class="panel"><span class="muted">전체 지출</span><div class="money">${money(overall)}</div></div>
+        <div class="panel"><span class="muted">남은 예산</span><div class="money ${state.total && overall > state.total ? 'over' : ''}">${state.total ? money(state.total - overall) : '—'}</div></div>
+      </div>
+      <div class="panel estimate-summary">
+        <h3>${icon('calendar')} 일정 예상 비용</h3>
+        <div class="row"><span>여행 전체 예상</span><strong>${money(tripEstimate)}</strong></div>
+        <div class="row"><span>예상 비용 반영 후</span><strong>${remaining(tripEstimate)}</strong></div>
+      </div>
+      <div class="layout">
+        <section class="panel">
+          <div class="budget-filter"><h3>${icon('wallet')} 지출 내역</h3><select id="budget-filter" aria-label="지출 조회 날짜">
+            <option value="all">전체 기간</option>
+            ${state.days.map((_, index) => `<option value="${index}" ${String(index) === filter ? 'selected' : ''}>${dayLabel(index)}</option>`).join('')}
+          </select></div>
+          <div class="row"><span>선택 기간 합계</span><strong>${money(spend(entries))}</strong></div>
+          ${entries.map((entry) => `<div class="expense-row">
+            <div><strong>${escape(entry.title)}</strong><small>${entry.date.slice(5).replace('-', '.')} · ${escape(entry.time)} · ${escape(entry.category)}</small></div>
+            <div class="actions"><b class="amount">${money(entry.amount)}</b>${iconButton('지출 수정', 'edit', 'editExpense', entry.id)}</div>
+          </div>`).join('') || '<p class="empty">아직 기록된 지출이 없어요.</p>'}
+        </section>
+        <div>
+          <section class="panel"><h3>${icon('calendar')} 시간대별 지출</h3>
+            ${periods.map(([label, hours, start, end]) => {
+              const amount = spend(entries.filter((entry) => {
+                const hour = Number(entry.time.slice(0,2));
+                return hour >= start && hour < end;
+              }));
+              return `<div class="row"><span>${label} <small>${hours}</small></span><strong>${money(amount)}</strong></div>${bar(amount, spend(entries))}`;
+            }).join('')}
+          </section>
+          <section class="panel"><h3>${icon('wallet')} 항목별 배분 · 전체 기간</h3>
+            <div class="row"><span>미배분 예산</span><b>${state.total ? money(state.total - reserved) : '—'}</b></div>
+            ${categories.map((category) => {
+              const amount = spend(state.expenses, category);
+              const limit = state.budget[category] || 0;
+              return `<div class="allocation row"><span>${category}</span><b class="${limit && amount > limit ? 'over' : ''}">${money(amount)} <span class="allocation-slash">/</span> ${money(limit)}</b>${bar(amount, limit)}</div>`;
+            }).join('')}
+          </section>
+        </div>
+      </div>`;
+  }
+
+  function route() {
+    const stops = checkpoints();
+    return `
+      <div class="sectionhead"><h2>이동 코스</h2></div>${tabs()}
+      <div class="panel">
+        <div class="head"><h3>${icon('route')} ${dayLabel(day)} · ${escape(state.days[day][2])}</h3></div>
+        <p class="subtext">장소가 입력된 일정이 시간순으로 표시돼요.</p>
+        ${stops.map((event, index) => {
+          const prev = stops[index - 1];
+          return `<div class="route-place"><i class="bubble">${icon(event.type)}</i><div>
+            <strong>${escape(event.time)} · ${escape(event.title)}</strong>
+            ${prev ? `<small>${escape(prev.title)} 출발${event.mode ? ' · ' + escape(event.mode) : ''}</small>` : ''}
+            ${event.note ? `<small>${escape(event.note)}</small>` : ''}
+            <div class="route-links">${prev ? mapLink('구글 지도 길찾기', mapURL(event, prev)) : ''}${mapLink('장소 보기', mapURL(event))}</div>
+          </div></div>`;
+        }).join('') || '<p class="empty">계획에서 장소를 추가해 주세요.</p>'}
+      </div>`;
+  }
+
+  function render() {
+    $('location-name').textContent = state.location;
+    $('country-name').textContent = state.country;
+    $('trip-heading').innerHTML = escape(state.location) + ' 여행<span lang="ja">' + escape(state.kanji) + '</span>';
+    $('trip-dates').innerHTML = isoDate(0).replaceAll('-', '.') + ' ' + state.days[0][1]
+      + ' — ' + state.days.at(-1)[0] + ' ' + state.days.at(-1)[1] + ' <em>3박 4일</em>';
+    $('nav').innerHTML = sections.map(([id, glyph, label]) =>
+      `<button type="button" class="${page === id ? 'on' : ''}" ${page === id ? 'aria-current="page"' : ''} data-action="page" data-id="${id}">${icon(glyph)} ${label}</button>`
+    ).join('');
+    $('content').innerHTML = { plan, budget, route }[page]();
+    $('budget-filter')?.addEventListener('change', (event) => {
+      filter = event.target.value;
+      render();
+      $('budget-filter').focus();
+    });
+  }
+
+  function input(name, label, value, type = 'text', attributes = '') {
+    return `<label><span>${label}</span><input name="${name}" type="${type}" value="${escape(value)}" ${attributes}></label>`;
+  }
+
+  function select(name, label, options, value) {
+    return `<label><span>${label}</span><select name="${name}">${options.map(([id, title]) =>
+      `<option value="${escape(id)}" ${value === id ? 'selected' : ''}>${escape(title)}</option>`
+    ).join('')}</select></label>`;
+  }
+
+  function openEditor(kind, id) {
+    const entry = kind === 'event' ? events().find((item) => item.id === id) : state.expenses.find((item) => item.id === id);
+    editor = { kind, entry };
+    $('editor-title').textContent = kind === 'budget' ? '예산 배분' : (kind === 'event' ? '일정' : '지출') + (entry ? ' 수정' : ' 추가');
+    $('error').textContent = '';
+    $('remove').hidden = !entry;
+    const dayOptions = state.days.map((_, index) => [isoDate(index), dayLabel(index)]);
+    const moneyInput = 'min="0" max="100000000" step="1" inputmode="numeric"';
+    const currentTime = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute:'2-digit', hourCycle: 'h23' }).format();
+    if (kind === 'budget') {
+      $('fields').innerHTML = input('total', '전체 예산 (¥)', state.total || '', 'number', moneyInput)
+        + '<div class="form-pair">' + categories.map((category, index) =>
+          input('cat' + index, category + ' (¥)', state.budget[category] || '', 'number', moneyInput)).join('') + '</div>';
+    } else if (kind === 'expense') {
+      $('fields').innerHTML = `<div class="form-pair">${select('date', '날짜', dayOptions, entry?.date || isoDate(page === 'budget' && filter !== 'all' ? Number(filter) : day))}${input('time','시간 (JST)', entry?.time || currentTime,'time','required')}</div>`
+        + input('title','사용처 / 내용',entry?.title,'text','maxlength="100" required')
+        + `<div class="form-pair">${select('category','항목',categories.map((c) => [c,c]),entry?.category)}${input('amount','사용 금액 (¥)',entry?.amount,'number','required min="1" max="100000000" step="1" inputmode="numeric"')}</div>`;
+    } else {
+      $('fields').innerHTML = `<div class="form-pair">${select('date','날짜',dayOptions,isoDate(day))}${input('time','시간 (JST)',entry?.time || '12:00','time','required')}</div>`
+        + `<div class="form-pair">${input('title','일정 이름',entry?.title,'text','maxlength="100" required')}${input('estimate','예상 비용 (¥)',entry?.estimate,'number',moneyInput + ' placeholder="선택 입력"')}</div>`
+        + `<div class="form-pair">${select('type','종류',eventTypes,entry?.type)}${select('status','상태',allowedStatuses.map((value) => [value,value]),entry?.status)}</div>`
+        + input('place','지도에 검색할 장소 또는 주소',entry?.place,'text','maxlength="160"')
+        + input('mode','이전 장소에서 오는 방법',entry?.mode,'text','maxlength="120" placeholder="예: 도보, JR 야마노테선"')
+        + input('note','메모',entry?.note,'text','maxlength="200"');
+    }
+    updateMoneyPreview();
+    $('modal').showModal();
+  }
+
+  function updateMoneyPreview() {
+    if (!editor) return;
+    const { kind, entry } = editor;
+    const values = Object.fromEntries(new FormData($('editor')));
+    const preview = $('money-preview');
+    const pairs = [];
+    if (kind === 'event') {
+      const estimate = Number(values.estimate) || 0;
+      const selectedDay = state.days.findIndex((_, index) => isoDate(index) === values.date);
+      if (selectedDay < 0) return;
+      const dateTotal = planned(state.days[selectedDay][3], entry?.id) + estimate;
+      const wholeTrip = planned(allEvents(), entry?.id) + estimate;
+      pairs.push(['이 일정 예상 비용', money(estimate)], ['선택한 날짜 예상 합계', money(dateTotal)],
+        ['여행 전체 예상 합계', money(wholeTrip)]);
+      if (state.total) pairs.push(['예상 비용 반영 후', remaining(wholeTrip)]);
+    } else if (kind === 'expense') {
+      pairs.push(['지출 원화 환산', money(Number(values.amount) || 0)]);
+    } else {
+      const total = Number(values.total) || 0;
+      const reserved = sum(categories.map((_, index) => Number(values['cat' + index]) || 0));
+      pairs.push(['전체 예산', money(total)], ['미배분 예산', money(total - reserved)]);
+    }
+    preview.hidden = false;
+    preview.innerHTML = pairs.map(([label, value]) =>
+      `<div class="row"><span>${label}</span><strong>${value}</strong></div>`).join('') + rate();
+  }
+
+  $('editor').addEventListener('input', updateMoneyPreview);
+  $('editor').addEventListener('change', updateMoneyPreview);
+
+  async function commit(next) {
+    if (saving) throw new Error('기록을 저장 중이에요. 잠시 후 다시 시도해 주세요.');
+    saving = true;
+    try {
+      const record = JSON.stringify(await encrypt(next));
+      if (canStore) {
+        let onDisk;
+        try {
+          onDisk = localStorage.getItem(cacheKey);
+        } catch {
+          canStore = false;
+        }
+        if (canStore && onDisk !== diskSnapshot) {
+          throw new Error('다른 탭에서 기록이 변경됐어요. 페이지를 새로 열어주세요.');
+        }
+      }
+      if (canStore) {
+        try {
+          localStorage.setItem(cacheKey, record);
+          diskSnapshot = record;
+        } catch {
+          canStore = false;
+        }
+      }
+      state = next;
+      showSaveStatus();
+    } finally {
+      saving = false;
+    }
+  }
+
+  function showSaveStatus() {
+    $('status').textContent = canStore
+      ? '이 브라우저에 저장됨'
+      : '자동 저장을 사용할 수 없어요. 닫기 전에 잠금 백업을 내려받아 주세요.';
+  }
+
+  function replaceEntry(entries, entry, next) {
+    const others = entry ? entries.filter(({ id }) => id !== entry.id) : entries;
+    return [...others, next];
+  }
+
+  $('editor').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const values = Object.fromEntries(new FormData(event.target));
+    const { kind, entry } = editor;
+    const next = structuredClone(state);
+    let nextDay = day;
+    $('save').disabled = true;
+    $('remove').disabled = true;
+    $('close').disabled = true;
+    $('error').textContent = '';
+    try {
+      if (kind === 'budget') {
+        next.total = Number(values.total);
+        next.budget = Object.fromEntries(categories.map((c, index) => [c, Number(values['cat' + index])]));
+        if (sum(Object.values(next.budget)) > next.total) throw new Error('항목별 배분 합계가 전체 예산을 넘어요.');
+      } else {
+        values.title = values.title.trim();
+        if (!values.title) throw new Error('이름을 입력해 주세요.');
+        const id = entry?.id || newId();
+        if (kind === 'expense') {
+          next.expenses = replaceEntry(next.expenses, entry, { ...values, id, amount: Number(values.amount) });
+        } else {
+          const { date, estimate, ...data } = values;
+          nextDay = next.days.findIndex((_, index) => isoDate(index) === date);
+          if (entry) next.days[day][3] = next.days[day][3].filter((item) => item.id !== id);
+          const plannedCost = estimate === '' || estimate === undefined ? null : Number(estimate);
+          if (plannedCost !== null && (!Number.isSafeInteger(plannedCost) || plannedCost < 0 || plannedCost > 100000000)) {
+            throw new Error('예상 비용을 0 이상의 엔화 정수로 입력해 주세요.');
+          }
+          next.days[nextDay][3].push({
+            ...data, estimate: plannedCost, place: data.place.trim(), id, done: entry?.done || false,
+          });
+        }
+      }
+      await commit(next);
+      day = nextDay;
+      $('modal').close();
+      render();
+    } catch (error) {
+      $('error').textContent = error.message;
+    } finally {
+      $('save').disabled = false;
+      $('remove').disabled = false;
+      $('close').disabled = false;
+    }
+  });
+
+  $('remove').addEventListener('click', async () => {
+    const { kind, entry } = editor;
+    if (!entry || !confirm(`‘${entry.title}’ 항목을 삭제할까요?`)) return;
+    const next = structuredClone(state);
+    if (kind === 'event') next.days[day][3] = next.days[day][3].filter((item) => item.id !== entry.id);
+    else next.expenses = next.expenses.filter((item) => item.id !== entry.id);
+    $('remove').disabled = true;
+    $('save').disabled = true;
+    try {
+      await commit(next);
+      $('modal').close();
+      render();
+    } catch (error) {
+      $('error').textContent = error.message;
+    } finally {
+      $('remove').disabled = false;
+      $('save').disabled = false;
+    }
+  });
+
+  function lock() {
+    $('modal').close();
+    key = null;
+    state = null;
+    editor = null;
+    $('fields').replaceChildren();
+    $('money-preview').replaceChildren();
+    $('money-preview').hidden = true;
+    for (const id of ['content', 'location-name', 'country-name', 'trip-heading', 'trip-dates']) {
+      $(id).replaceChildren();
+    }
+    $('status').textContent = '';
+    $('app').hidden = true;
+    $('gate').hidden = false;
+    $('password').type = 'password';
+    $('password').focus();
+    window.scrollTo(0, 0);
+  }
+
+  async function backup() {
+    const record = await encrypt(state);
+    const snapshot = document.documentElement.cloneNode(true);
+    snapshot.querySelector('#trip-payload').textContent = JSON.stringify({ ...record, copy: newId() });
+    for (const id of ['nav', 'content', 'fields', 'money-preview', 'location-name', 'country-name', 'trip-heading', 'trip-dates', 'status', 'error', 'gate-error', 'editor-title']) {
+      snapshot.querySelector('#' + id).replaceChildren();
+    }
+    snapshot.querySelector('#modal').removeAttribute('open');
+    snapshot.querySelector('#money-preview').hidden = true;
+    snapshot.querySelector('#gate').hidden = false;
+    snapshot.querySelector('#app').hidden = true;
+    snapshot.querySelector('#password').removeAttribute('value');
+    const url = URL.createObjectURL(new Blob(['<!doctype html>\n', snapshot.outerHTML], { type: 'text/html' }));
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'index.html';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    $('status').textContent = '현재 기록을 담은 잠금 백업을 내려받았어요.';
+  }
+
+  document.body.addEventListener('click', async (event) => {
+    const target = event.target.closest('[data-action]');
+    if (!target || !state || saving) return;
+    const { action, id } = target.dataset;
+    try {
+      switch (action) {
+        case 'page':
+          page = id;
+          render();
+          $('content').scrollIntoView({ block: 'nearest' });
+          break;
+        case 'day':
+          day = Number(id);
+          render();
+          document.querySelector('.days .on').focus();
+          break;
+        case 'lock': lock(); break;
+        case 'backup': await backup(); break;
+        case 'newEvent':
+        case 'editEvent': openEditor('event', id); break;
+        case 'newExpense':
+        case 'editExpense': openEditor('expense', id); break;
+        case 'editBudget': openEditor('budget'); break;
+        case 'toggleEvent': {
+          target.disabled = true;
+          const next = structuredClone(state);
+          const current = next.days[day][3].find((entry) => entry.id === id);
+          current.done = !current.done;
+          await commit(next);
+          render();
+          document.querySelector(`[data-action="toggleEvent"][data-id="${id}"]`)?.focus();
+          break;
+        }
+      }
+    } catch (error) {
+      $('status').textContent = error.message;
+      target.disabled = false;
+    }
+  });
+
+  $('close').addEventListener('click', () => $('modal').close());
+  $('modal').addEventListener('cancel', (event) => {
+    if ($('save').disabled) event.preventDefault();
+  });
+  $('show-password').addEventListener('click', () => {
+    const reveal = $('password').type === 'password';
+    $('password').type = reveal ? 'text' : 'password';
+    $('show-password').setAttribute('aria-label', reveal ? '접속 코드 숨기기' : '접속 코드 표시');
+    $('password').focus();
+  });
+
+  $('unlock').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    $('gate-error').textContent = '';
+    $('open-book').disabled = true;
+    $('open-book').textContent = '수첩 여는 중…';
+    try {
+      if (!globalThis.crypto?.subtle) throw new Error('secure-context');
+      const accessKey = await getKey($('password').value.trim());
+      const initial = await decrypt(payload, accessKey);
+      canStore = true;
+      diskSnapshot = null;
+      try {
+        diskSnapshot = localStorage.getItem(cacheKey);
+      } catch {
+        canStore = false;
+      }
+      state = initial;
+      if (diskSnapshot) {
+        try {
+          state = await decrypt(JSON.parse(diskSnapshot), accessKey);
+        } catch {
+          canStore = false;
+        }
+      }
+      key = accessKey;
+      render();
+      if (!canStore) showSaveStatus();
+      $('password').value = '';
+      $('gate').hidden = true;
+      $('app').hidden = false;
+      $('nav').querySelector('.on').focus();
+    } catch (error) {
+      $('gate-error').textContent = error.message === 'secure-context'
+        ? '미리보기에서는 암호를 풀 수 없어요. 파일을 내려받아 Chrome이나 Edge에서 직접 열거나, GitHub Pages의 HTTPS 주소로 열어주세요.'
+        : error.name === 'OperationError' ? '접속 코드를 다시 확인해 주세요.' : '저장된 수첩을 열 수 없어요.';
+    } finally {
+      $('open-book').textContent = '수첩 열기';
+      $('open-book').disabled = false;
+    }
+  });
+
+  $('gate-hint').textContent = '접속 코드를 입력해 수첩을 열어주세요.';
+  $('open-book').disabled = false;
+})();
+  </script>
+</body>
+</html>
